@@ -58,5 +58,5 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=efm32hg309
+LibName30=mkl27z265vfm4
 LibName31=usb-pcb
