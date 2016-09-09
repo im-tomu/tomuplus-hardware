@@ -20,11 +20,11 @@ The board has;
 
 --
 
-Uses a Silicon Labs EFM32HG309 ([datasheet](https://www.silabs.com/Support%20Documents/TechnicalDocs/EFM32HG309.pdf)).
+Uses a Freescale Semiconductor / NXP Kinetis KL27 (MKL27Z256VFM4) ([datasheet](http://cache.freescale.com/files/32bit/doc/data_sheet/KL27P64M48SF6.pdf)).
 
 The important features are;
- * [~$2.15 USD on Digikey](http://www.digikey.com/product-detail/en/silicon-labs/EFM32HG309F64G-A-QFN24/336-3207-ND/5142721)
- * QFN24 - 5mm x 5mm package
+ * [~$5.00 USD on Digikey](https://www.digikey.com.au/product-detail/en/freescale-semiconductor-nxp/MKL27Z256VFM4/MKL27Z256VFM4-ND/4988919)
+ * QFN32 - 5mm x 5mm package
  * Inbuilt 5V to 3V3 regulator.
  * Crystal-less USB
 
@@ -53,7 +53,7 @@ Individual parts;
   - Get highest millicandela rating you can.
   - [Digikey Search of LEDs in 0402 package](https://www.digikey.com.au/short/3m8rz0)
 
- * 1 x EFM32HG309 or EMF32HG308
+ * 1 x MKL27Z256VFM4
 
 
 ## TODO
