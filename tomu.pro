@@ -1,4 +1,4 @@
-update=Sun 31 Jul 2016 06:02:04 PM AEST
+update=25/11/2016 1:54:13 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -60,3 +60,4 @@ LibName28=contrib
 LibName29=valves
 LibName30=mkl27z265vfm4
 LibName31=usb-pcb
+LibName32=atecc508a
