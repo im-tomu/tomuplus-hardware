@@ -46,7 +46,7 @@
   )
 
   (setup
-    (last_trace_width 0.1524)
+    (last_trace_width 0.3048)
     (user_trace_width 0.0254)
     (user_trace_width 0.1016)
     (user_trace_width 0.127)
@@ -1089,6 +1089,8 @@
   (gr_line (start 30 23.77) (end 30 23.63) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 30 23.63) (end 30 23.5) (layer Edge.Cuts) (width 0.05))
 
+  (segment (start 24.903 20.193) (end 25.0926 20.3826) (width 0.3048) (layer B.Cu) (net 1))
+  (segment (start 25.0926 20.3826) (end 25.0926 21.1204) (width 0.3048) (layer B.Cu) (net 1))
   (segment (start 17.571506 20.339356) (end 17.571506 20.891106) (width 0.3048) (layer B.Cu) (net 1))
   (segment (start 17.571506 20.891106) (end 17.78 21.0996) (width 0.3048) (layer B.Cu) (net 1))
   (segment (start 19.3526 26.809) (end 19.9776 26.809) (width 0.3048) (layer B.Cu) (net 1))
@@ -1130,8 +1132,6 @@
   (segment (start 24.2051 22.6579) (end 24.2051 24.3829) (width 0.1524) (layer B.Cu) (net 1))
   (segment (start 22.4801 22.6579) (end 24.2051 22.6579) (width 0.1524) (layer B.Cu) (net 1))
   (segment (start 22.4801 24.3829) (end 22.4801 22.6579) (width 0.1524) (layer B.Cu) (net 1))
-  (segment (start 25.0926 21.1204) (end 25.0926 20.3826) (width 0.1524) (layer B.Cu) (net 1))
-  (segment (start 25.0926 20.3826) (end 24.903 20.193) (width 0.1524) (layer B.Cu) (net 1))
   (segment (start 20.9426 21.7704) (end 20.9426 21.493) (width 0.1524) (layer B.Cu) (net 1))
   (segment (start 20.9426 21.493) (end 20.6496 21.2) (width 0.1524) (layer B.Cu) (net 1))
   (segment (start 20.6496 21.2) (end 19.9924 21.2) (width 0.1524) (layer B.Cu) (net 1))
