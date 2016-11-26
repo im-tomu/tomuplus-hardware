@@ -1,7 +1,7 @@
 
-# [Tomu, I'm](tomu.im)
+# [Tomu+, I'm](tomu.im)
 
-[I'm Tomu](tomu.im) a tiny ARM microprocessor which fits in your USB port. 
+[I'm Tomu+](tomu.im) a *improved* tiny ARM microprocessor which fits in your USB port.
 I have two buttons and two LEDs.
 
 ![Tomu Front Render](img/tomu-front.png)
@@ -35,7 +35,6 @@ The important features are;
 These make something which is almost hand solder-able fit into the tiny size.
 
 ## BOM
-
 
 All parts are ordered from Digikey but could easily be ordered from somewhere else.
 
