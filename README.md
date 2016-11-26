@@ -43,12 +43,13 @@ All parts are ordered from Digikey but could easily be ordered from somewhere el
 Individual parts;
 
  * Resistors
-  - 2 x 0402 - 15 Ohm - [Digikey](https://www.digikey.com.au/short/3m8rz5)
+  - 2 x 0402 - 33 Ohm - [Digikey](https://www.digikey.com.au/short/35385r)
   - 2 x 0402 - ~50 Ohm (Depends on LED choice)
+  - 1 x 0402 - 10k Ohm
 
  * Capacitors - [Digikey Capacitors 0402, >1uF](https://www.digikey.com.au/short/3m8r4z)
-  - 2 x Capacitor 1uF 0402
-  - 1 x Capacitor >10uF 0402
+  - 1 x Capacitor ~2.2uF 0402
+  - 1 x Capacitor ~4.7uF 0402
 
  * 2 x LED 0402
   - You choice of two different colors (might require adjustment of R1/R2).
@@ -56,8 +57,9 @@ Individual parts;
   - Get highest millicandela rating you can.
   - [Digikey Search of LEDs in 0402 package](https://www.digikey.com.au/short/3m8rz0)
 
- * 1 x MKL27Z256VFM4
+ * 1 x MKL27Z256VFM4 - [Digikey](https://www.digikey.com.au/short/353852)
 
+ * (Optional) 1 x Atmel ATECC508A Auth IC - [Digikey](https://www.digikey.com.au/short/35385n)
 
 ## TODO
 
