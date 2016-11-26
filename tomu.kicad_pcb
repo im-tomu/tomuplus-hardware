@@ -914,7 +914,7 @@
     (arrow2a (pts (xy 16.383 26.416) (xy 15.796579 27.542504)))
     (arrow2b (pts (xy 16.383 26.416) (xy 16.969421 27.542504)))
   )
-  (gr_text "tomu.im +0.0" (at 26.5176 28.6512 90) (layer F.SilkS)
+  (gr_text "tomu.im +0.1" (at 26.5176 28.6512 90) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.25)) (justify left))
   )
   (gr_line (start 21.44 23.99) (end 21.12 23.99) (layer Dwgs.User) (width 0.1016) (tstamp 579C9EFC))
