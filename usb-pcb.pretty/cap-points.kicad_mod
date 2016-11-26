@@ -1,0 +1,13 @@
+(module cap-points (layer F.Cu) (tedit 583933E9)
+  (descr "Connecteurs 2 pins")
+  (tags "CONN DEV")
+  (attr virtual)
+  (fp_text reference W1 (at 0.5334 3.302) (layer F.Fab) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value CAP0 (at 1.27 2) (layer F.Fab)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (pad 1 smd rect (at 0 0) (size 0.254 0.254) (layers F.Cu))
+  (pad 2 smd rect (at 2.54 0) (size 0.254 0.254) (layers F.Cu))
+)

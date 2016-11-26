@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /usr/local/google/home/tansell/foss/hardware/tomu/hardware/tomu.sch)
-    (date "Sat 26 Nov 2016 05:37:49 PM AEDT")
+    (date "Sat 26 Nov 2016 05:46:00 PM AEDT")
     (tool "Eeschema 4.0.4+e1-6308~48~ubuntu14.04.1-stable")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -101,11 +101,13 @@
       (tstamp 5837D54F))
     (comp (ref U2)
       (value ateccXXXa)
+      (footprint Housings_DFN_QFN:DFN-8-1EP_3x2mm_Pitch0.5mm)
       (libsource (lib atecc508a) (part ateccXXXa))
       (sheetpath (names /) (tstamps /))
       (tstamp 583917F0))
     (comp (ref JP1)
       (value Jumper_NO_Small)
+      (footprint Resistors_SMD:R_0402)
       (libsource (lib device) (part Jumper_NO_Small))
       (sheetpath (names /) (tstamps /))
       (tstamp 58396FFD)))

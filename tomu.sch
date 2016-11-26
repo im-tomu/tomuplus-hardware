@@ -207,7 +207,7 @@ U 1 1 57990318
 P 2335 3575
 F 0 "W1" H 2330 3525 50  0000 C CNN
 F 1 "CAP0" H 2335 3645 50  0000 C CNN
-F 2 "Measurement_Points:Test_Point_2Pads" H 2335 3575 50  0001 C CNN
+F 2 "usb-pcb:cap-points" H 2335 3575 50  0001 C CNN
 F 3 "" H 2335 3575 50  0000 C CNN
 	1    2335 3575
 	-1   0    0    -1  
@@ -218,13 +218,13 @@ U 1 1 57990582
 P 2335 3775
 F 0 "W2" H 2330 3835 50  0000 C CNN
 F 1 "CAP1" H 2335 3710 50  0000 C CNN
-F 2 "Measurement_Points:Test_Point_2Pads" H 2335 3775 50  0001 C CNN
+F 2 "usb-pcb:cap-points" H 2335 3775 50  0001 C CNN
 F 3 "" H 2335 3775 50  0000 C CNN
 	1    2335 3775
 	-1   0    0    -1  
 $EndComp
-Text Notes 7045 4680 0    60   ~ 0
-Bootloader Config\n-----\n14 - ~NMI~ - Pull low to enable\n\n10 - PTA0 - SWD_CLK\n13 - PTA3 - SWD_DIO\n\n11 - PTA1 - LPUART0_RX\n12 - PTA2 - LPUART0_TX\n\n20 - PTB0 - I2C0_SCL\n21 - PTB1 - I2C0_SDA\n\n25 - PTC4 - ~SPI0_SS\n26 - PTC5 - SPI0_SCK\n27 - PTC6 - SPI0_MOSI\n28 - PTC7 - SPI0_MISO\n-----\n\nADC \n-----\n 1 - PTE0 - CMP0_OUT\n 9 - PTE30 - DAC0_OUT/ADC0_SE23/CMP0_IN4\n\n20 - PTB0 - ADC0_SE8\n21 - PTB1 - ADC0_SE9\n22 - PTC1 - ADC0_SE15\n23 - PTC2 - ADC0_SE11\n\n27 - PTC6 - CMP0_IN0\n28 - PTC7 - CMP0_IN1\n\n30 - PTD5 - ADC0_SE6b\n31 - PTD6 - ADC0_SE7b
+Text Notes 6785 3230 0    60   ~ 0
+Bootloader Config\n-----\n14 - ~NMI~ - Pull low to enable\n\n10 - PTA0 - SWD_CLK\n13 - PTA3 - SWD_DIO\n\n11 - PTA1 - LPUART0_RX\n12 - PTA2 - LPUART0_TX\n\n20 - PTB0 - I2C0_SCL\n21 - PTB1 - I2C0_SDA\n\n25 - PTC4 - ~SPI0_SS\n26 - PTC5 - SPI0_SCK\n27 - PTC6 - SPI0_MOSI\n28 - PTC7 - SPI0_MISO\n-----
 Text Label 2710 3675 0    39   ~ 0
 CAP0A
 Text Label 2890 3775 2    39   ~ 0
@@ -735,4 +735,24 @@ Wire Wire Line
 	865  4740 865  4575
 Wire Wire Line
 	865  4575 965  4575
+Text Notes 2430 3105 1    20   ~ 0
+Bottom
+Text Notes 2130 3105 1    20   ~ 0
+Bottom
+Text Notes 1835 3105 1    20   ~ 0
+Bottom
+Wire Notes Line
+	795  4405 1835 4405
+Wire Notes Line
+	1835 4405 1835 4535
+Wire Notes Line
+	1835 4535 2590 4535
+Wire Notes Line
+	2590 4535 2590 5600
+Wire Notes Line
+	2590 5600 790  5600
+Wire Notes Line
+	790  5600 790  4405
+Text Notes 2140 5550 0    60   ~ 0
+Optional\nCrypto\nElement
 $EndSCHEMATC
