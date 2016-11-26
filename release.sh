@@ -10,7 +10,7 @@ else
 	exit 1
 fi
 
-CURRENT_VERSION=$(git describe --abbrev=0)
+CURRENT_VERSION=$(git describe --match +* --abbrev=0)
 
 VERSION_MATCH='+\([0-9]\+\)\.\([0-9]\+\)'
 MAJOR_VERSION=$(echo $CURRENT_VERSION | sed -e"s/$VERSION_MATCH/\1/")
