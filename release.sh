@@ -12,14 +12,14 @@ fi
 
 CURRENT_VERSION=$(git describe --abbrev=0)
 
-VERSION_MATCH='v\([0-9]\+\)\.\([0-9]\+\)'
+VERSION_MATCH='+\([0-9]\+\)\.\([0-9]\+\)'
 MAJOR_VERSION=$(echo $CURRENT_VERSION | sed -e"s/$VERSION_MATCH/\1/")
 MINOR_VERSION=$(echo $CURRENT_VERSION | sed -e"s/$VERSION_MATCH/\2/")
 
 echo "Current version: $CURRENT_VERSION"
 
 # Work out the next version
-NEXT_VERSION="v$MAJOR_VERSION.$((MINOR_VERSION+1))"
+NEXT_VERSION="+$MAJOR_VERSION.$((MINOR_VERSION+1))"
 echo "Next version: $NEXT_VERSION"
 OUTDIR=releases/$NEXT_VERSION
 mkdir $OUTDIR
