@@ -205,8 +205,8 @@ $Comp
 L TEST W1
 U 1 1 57990318
 P 2335 3575
-F 0 "W1" H 2335 3635 50  0000 C CNN
-F 1 "CAP0" H 2335 3505 50  0000 C CNN
+F 0 "W1" H 2330 3525 50  0000 C CNN
+F 1 "CAP0" H 2335 3645 50  0000 C CNN
 F 2 "Measurement_Points:Test_Point_2Pads" H 2335 3575 50  0001 C CNN
 F 3 "" H 2335 3575 50  0000 C CNN
 	1    2335 3575
@@ -216,8 +216,8 @@ $Comp
 L TEST W2
 U 1 1 57990582
 P 2335 3775
-F 0 "W2" H 2335 3835 50  0000 C CNN
-F 1 "CAP1" H 2335 3705 50  0000 C CNN
+F 0 "W2" H 2330 3835 50  0000 C CNN
+F 1 "CAP1" H 2335 3710 50  0000 C CNN
 F 2 "Measurement_Points:Test_Point_2Pads" H 2335 3775 50  0001 C CNN
 F 3 "" H 2335 3775 50  0000 C CNN
 	1    2335 3775
@@ -225,7 +225,7 @@ F 3 "" H 2335 3775 50  0000 C CNN
 $EndComp
 Text Notes 7045 4680 0    60   ~ 0
 Bootloader Config\n-----\n14 - ~NMI~ - Pull low to enable\n\n10 - PTA0 - SWD_CLK\n13 - PTA3 - SWD_DIO\n\n11 - PTA1 - LPUART0_RX\n12 - PTA2 - LPUART0_TX\n\n20 - PTB0 - I2C0_SCL\n21 - PTB1 - I2C0_SDA\n\n25 - PTC4 - ~SPI0_SS\n26 - PTC5 - SPI0_SCK\n27 - PTC6 - SPI0_MOSI\n28 - PTC7 - SPI0_MISO\n-----\n\nADC \n-----\n 1 - PTE0 - CMP0_OUT\n 9 - PTE30 - DAC0_OUT/ADC0_SE23/CMP0_IN4\n\n20 - PTB0 - ADC0_SE8\n21 - PTB1 - ADC0_SE9\n22 - PTC1 - ADC0_SE15\n23 - PTC2 - ADC0_SE11\n\n27 - PTC6 - CMP0_IN0\n28 - PTC7 - CMP0_IN1\n\n30 - PTD5 - ADC0_SE6b\n31 - PTD6 - ADC0_SE7b
-Text Label 2535 3575 0    39   ~ 0
+Text Label 2710 3675 0    39   ~ 0
 CAP0A
 Text Label 2890 3775 2    39   ~ 0
 CAP1A
@@ -233,9 +233,9 @@ Text Label 1235 1725 0    39   ~ 0
 LEU0_TX
 Text Label 1235 1625 0    39   ~ 0
 LEU0_RX
-Text Label 1710 3685 1    39   ~ 0
+Text Label 1635 3110 2    39   ~ 0
 LED1
-Text Label 1635 3685 1    39   ~ 0
+Text Label 1635 3260 2    39   ~ 0
 LED0
 Text Label 4610 2050 0    8    ~ 0
 RUSB_D-
@@ -256,6 +256,118 @@ F 3 "" H 985 3760 50  0000 C CNN
 	1    985  3760
 	-1   0    0    1   
 $EndComp
+Text Notes 5345 2745 1    60   ~ 0
+Cout
+Text Notes 4505 1290 0    60   ~ 0
+RESET_b pin is dedicated. The port is configured as open drain \nand pullup enabled.\n\nDM and DP I/O pads must connect through series resistors \n(approximately 33 Ω each) to the USB connector on the application \nprinted circuit board (PCB)
+$Comp
+L MKL27Z256VFM4 U1
+U 1 1 5798B6D7
+P 3510 3075
+F 0 "U1" H 3460 3025 60  0000 C CNN
+F 1 "MKL27Z256VFM4" H 4160 3750 39  0000 C CNN
+F 2 "Housings_DFN_QFN:QFN-32-1EP_5x5mm_Pitch0.5mm" H 3510 3075 60  0001 C CNN
+F 3 "" H 3510 3075 60  0000 C CNN
+	1    3510 3075
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R5
+U 1 1 57D4D30F
+P 2735 1950
+F 0 "R5" V 2770 2015 50  0000 L CNN
+F 1 "10k" V 2735 1900 39  0000 L CNN
+F 2 "Resistors_SMD:R_0402" H 2735 1950 50  0001 C CNN
+F 3 "" H 2735 1950 50  0000 C CNN
+	1    2735 1950
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR06
+U 1 1 57D4D53F
+P 2570 1950
+F 0 "#PWR06" H 2570 1700 50  0001 C CNN
+F 1 "GND" V 2575 1822 50  0000 R CNN
+F 2 "" H 2570 1950 50  0000 C CNN
+F 3 "" H 2570 1950 50  0000 C CNN
+	1    2570 1950
+	0    1    1    0   
+$EndComp
+$Comp
+L CONN_01X07 P1
+U 1 1 5837D54F
+P 985 1825
+F 0 "P1" H 985 2225 50  0000 C CNN
+F 1 "DEBUG" V 1085 1825 50  0000 C CNN
+F 2 "usb-pcb:debug-points-127mm" H 985 1825 50  0001 C CNN
+F 3 "" H 985 1825 50  0000 C CNN
+	1    985  1825
+	-1   0    0    -1  
+$EndComp
+Text Label 1235 2125 0    39   ~ 0
+RESET
+NoConn ~ 2935 3375
+NoConn ~ 2935 3475
+Text Notes 3175 3325 0    20   ~ 0
+Pin 17/18 are blocked\nby Pin 19/Reset trace
+Text Notes 3930 4990 0    60   ~ 0
+ADC \n-----\n 1 - PTE0 - CMP0_OUT\n 9 - PTE30 - DAC0_OUT/ADC0_SE23/CMP0_IN4\n\n20 - PTB0 - ADC0_SE8\n21 - PTB1 - ADC0_SE9\n22 - PTC1 - ADC0_SE15\n23 - PTC2 - ADC0_SE11\n\n27 - PTC6 - CMP0_IN0\n28 - PTC7 - CMP0_IN1\n\n30 - PTD5 - ADC0_SE6b\n31 - PTD6 - ADC0_SE7b
+Text Label 2890 3875 2    39   ~ 0
+LED1
+Text Label 2890 3975 2    39   ~ 0
+LED0
+Text Notes 2645 4465 0    60   ~ 0
+SPI
+NoConn ~ 2935 4075
+$Comp
+L GND #PWR07
+U 1 1 583859AA
+P 1520 5365
+F 0 "#PWR07" H 1520 5115 50  0001 C CNN
+F 1 "GND" H 1520 5215 50  0000 C CNN
+F 2 "" H 1520 5365 50  0000 C CNN
+F 3 "" H 1520 5365 50  0000 C CNN
+	1    1520 5365
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR08
+U 1 1 58385F9E
+P 2255 4740
+F 0 "#PWR08" H 2255 4590 50  0001 C CNN
+F 1 "+3V3" V 2175 4805 50  0000 C CNN
+F 2 "" H 2255 4740 50  0000 C CNN
+F 3 "" H 2255 4740 50  0000 C CNN
+	1    2255 4740
+	0    1    1    0   
+$EndComp
+$Comp
+L ateccXXXa U2
+U 1 1 583917F0
+P 1520 5040
+F 0 "U2" H 1570 4940 60  0000 C CNN
+F 1 "ateccXXXa" H 1770 5440 60  0000 C CNN
+F 2 "" H 1520 5040 60  0001 C CNN
+F 3 "" H 1520 5040 60  0001 C CNN
+	1    1520 5040
+	1    0    0    -1  
+$EndComp
+Text Notes 2895 4215 0    20   ~ 0
+CS
+Text Notes 2935 4275 2    20   ~ 0
+SCK
+Text Notes 2935 4375 2    20   ~ 0
+MOSI
+Text Notes 2935 4475 2    20   ~ 0
+MISO
+Text Label 2925 4575 2    39   ~ 0
+ASPI_CS
+Text Label 2925 4675 2    39   ~ 0
+ASPI_SCK
+Text Label 2925 4775 2    39   ~ 0
+ASPI_MOSI
+Text Label 2925 4875 2    39   ~ 0
+ASPI_MISO
 Wire Wire Line
 	4610 2275 5235 2275
 Wire Wire Line
@@ -319,8 +431,6 @@ Wire Wire Line
 Wire Wire Line
 	1185 1925 1240 1925
 Wire Wire Line
-	1710 3110 1710 4110
-Wire Wire Line
 	2060 3775 2135 3775
 Wire Wire Line
 	2010 3575 2135 3575
@@ -331,30 +441,13 @@ Wire Wire Line
 Wire Wire Line
 	2685 3675 2935 3675
 Wire Wire Line
-	1710 3110 1460 3110
-Wire Wire Line
-	1635 4210 1635 3260
+	1635 3110 1460 3110
 Wire Wire Line
 	1635 3260 1460 3260
 Wire Wire Line
 	2060 3775 2060 4475
 Wire Wire Line
 	2010 3575 2010 4375
-Text Notes 5345 2745 1    60   ~ 0
-Cout
-Text Notes 4505 1290 0    60   ~ 0
-RESET_b pin is dedicated. The port is configured as open drain \nand pullup enabled.\n\nDM and DP I/O pads must connect through series resistors \n(approximately 33 Ω each) to the USB connector on the application \nprinted circuit board (PCB)
-$Comp
-L MKL27Z256VFM4 U1
-U 1 1 5798B6D7
-P 3510 3075
-F 0 "U1" H 3460 3025 60  0000 C CNN
-F 1 "MKL27Z256VFM4" H 4160 3750 39  0000 C CNN
-F 2 "Housings_DFN_QFN:QFN-32-1EP_5x5mm_Pitch0.5mm" H 3510 3075 60  0001 C CNN
-F 3 "" H 3510 3075 60  0000 C CNN
-	1    3510 3075
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4860 2725 4860 3025
 Wire Wire Line
@@ -378,32 +471,10 @@ Wire Wire Line
 	2010 4375 2935 4375
 Wire Wire Line
 	2060 4475 2935 4475
-$Comp
-L R_Small R5
-U 1 1 57D4D30F
-P 2735 1950
-F 0 "R5" V 2770 2015 50  0000 L CNN
-F 1 "10k" V 2735 1900 39  0000 L CNN
-F 2 "Resistors_SMD:R_0402" H 2735 1950 50  0001 C CNN
-F 3 "" H 2735 1950 50  0000 C CNN
-	1    2735 1950
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	2835 1950 2935 1950
 Wire Wire Line
 	2635 1950 2570 1950
-$Comp
-L GND #PWR06
-U 1 1 57D4D53F
-P 2570 1950
-F 0 "#PWR06" H 2570 1700 50  0001 C CNN
-F 1 "GND" V 2575 1822 50  0000 R CNN
-F 2 "" H 2570 1950 50  0000 C CNN
-F 3 "" H 2570 1950 50  0000 C CNN
-	1    2570 1950
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	1590 2075 1590 1825
 Wire Wire Line
@@ -418,17 +489,6 @@ Wire Wire Line
 	2935 2300 1990 2300
 Wire Wire Line
 	1900 1725 1185 1725
-$Comp
-L CONN_01X07 P1
-U 1 1 5837D54F
-P 985 1825
-F 0 "P1" H 985 2225 50  0000 C CNN
-F 1 "DEBUG" V 1085 1825 50  0000 C CNN
-F 2 "usb-pcb:debug-points-127mm" H 985 1825 50  0001 C CNN
-F 3 "" H 985 1825 50  0000 C CNN
-	1    985  1825
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	1185 2025 1240 2025
 Wire Wire Line
@@ -437,52 +497,24 @@ Wire Wire Line
 	1590 2525 1590 2125
 Wire Wire Line
 	1590 2125 1185 2125
-Text Label 1235 2125 0    39   ~ 0
-RESET
 Wire Wire Line
 	1900 2400 1900 1725
 Wire Wire Line
 	1990 2300 1990 1625
-NoConn ~ 2935 3375
-NoConn ~ 2935 3475
-Text Notes 1850 3305 0    60   ~ 0
-Pin 17/18 are blocked\nby Pin 19/Reset trace
-Text Notes 3930 4990 0    60   ~ 0
-ADC \n-----\n 1 - PTE0 - CMP0_OUT\n 9 - PTE30 - DAC0_OUT/ADC0_SE23/CMP0_IN4\n\n20 - PTB0 - ADC0_SE8\n21 - PTB1 - ADC0_SE9\n22 - PTC1 - ADC0_SE15\n23 - PTC2 - ADC0_SE11\n\n27 - PTC6 - CMP0_IN0\n28 - PTC7 - CMP0_IN1\n\n30 - PTD5 - ADC0_SE6b\n31 - PTD6 - ADC0_SE7b
 Wire Wire Line
 	2535 3775 2935 3775
-Text Label 2890 3875 2    39   ~ 0
-LED1
-Text Label 2890 3975 2    39   ~ 0
-LED0
 Wire Wire Line
 	2935 3975 2890 3975
 Wire Wire Line
 	2935 3875 2890 3875
 Wire Notes Line
-	2345 3420 2345 4195
+	2960 4160 2630 4160
 Wire Notes Line
-	2345 4195 2580 4195
+	2625 4160 2625 4495
 Wire Notes Line
-	2580 4195 2580 3890
+	2625 4490 2965 4490
 Wire Notes Line
-	2580 3890 2495 3890
-Wire Notes Line
-	2495 3890 2495 3420
-Wire Notes Line
-	2495 3420 2345 3420
-Text Notes 2395 4070 0    60   ~ 0
-I2C
-Wire Notes Line
-	2955 4115 2625 4115
-Wire Notes Line
-	2625 4115 2625 4525
-Wire Notes Line
-	2625 4525 2965 4525
-Wire Notes Line
-	2965 4525 2965 4115
-Text Notes 2645 4465 0    60   ~ 0
-SPI
+	2965 4490 2965 4160
 Wire Wire Line
 	2935 4275 2640 4275
 Wire Wire Line
@@ -491,75 +523,193 @@ Connection ~ 2640 3775
 Wire Wire Line
 	2685 4175 2935 4175
 Connection ~ 2685 3675
-NoConn ~ 2935 4075
-$Comp
-L atecc508a U2
-U 1 1 58384DF6
-P 1520 5040
-F 0 "U2" H 1570 4940 60  0000 C CNN
-F 1 "atecc508a" H 1770 5440 60  0000 C CNN
-F 2 "Housings_DFN_QFN:DFN-8-1EP_3x2mm_Pitch0.5mm" H 1520 5040 60  0001 C CNN
-F 3 "" H 1520 5040 60  0001 C CNN
-	1    1520 5040
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	1770 5290 1770 5325
+	1760 5325 1760 5290
 Wire Wire Line
-	1770 5325 1280 5325
+	1280 5325 1760 5325
 Wire Wire Line
 	1280 5325 1280 5040
 Wire Wire Line
 	1280 5040 1320 5040
-$Comp
-L GND #PWR07
-U 1 1 583859AA
-P 1520 5365
-F 0 "#PWR07" H 1520 5115 50  0001 C CNN
-F 1 "GND" H 1520 5215 50  0000 C CNN
-F 2 "" H 1520 5365 50  0000 C CNN
-F 3 "" H 1520 5365 50  0000 C CNN
-	1    1520 5365
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1520 5365 1520 5325
 Connection ~ 1520 5325
 Wire Wire Line
-	2220 4740 2270 4740
+	2610 4875 2610 5605
 Wire Wire Line
-	2270 4740 2270 4690
-$Comp
-L +3V3 #PWR08
-U 1 1 58385F9E
-P 2270 4690
-F 0 "#PWR08" H 2270 4540 50  0001 C CNN
-F 1 "+3V3" H 2270 4830 50  0000 C CNN
-F 2 "" H 2270 4690 50  0000 C CNN
-F 3 "" H 2270 4690 50  0000 C CNN
-	1    2270 4690
-	1    0    0    -1  
-$EndComp
+	2610 4875 2935 4875
 Wire Wire Line
-	2220 5040 2765 5040
+	2530 4775 2530 5040
 Wire Wire Line
-	2765 5040 2765 4875
+	2530 4775 2935 4775
 Wire Wire Line
-	2765 4875 2935 4875
+	2455 4675 2455 4940
 Wire Wire Line
-	2220 4940 2685 4940
+	2455 4675 2935 4675
 Wire Wire Line
-	2685 4940 2685 4775
+	2455 4940 2220 4940
 Wire Wire Line
-	2685 4775 2935 4775
+	2530 5040 2220 5040
 Wire Wire Line
-	2215 4840 2620 4840
+	1280 4575 2935 4575
 Wire Wire Line
-	2620 4840 2620 4675
+	1280 4575 1280 4740
 Wire Wire Line
-	2620 4675 2935 4675
-Text Label 2900 4775 2    60   ~ 0
-ASCL
-Text Label 2900 4875 2    60   ~ 0
-ASDA
+	1280 4740 1320 4740
+Wire Wire Line
+	2220 4740 2255 4740
+Wire Wire Line
+	2610 5605 1125 5605
+Wire Wire Line
+	1125 5605 1125 4840
+Wire Wire Line
+	1125 4840 1320 4840
+Text Notes 2970 3675 2    20   ~ 0
+SCL
+Text Notes 2970 3775 2    20   ~ 0
+SDA
+Text Notes 2510 3775 0    20   ~ 0
+SCK
+Wire Notes Line
+	1860 2665 2015 2665
+Wire Notes Line
+	2015 2665 2015 2870
+Wire Notes Line
+	2015 2870 1860 2870
+Wire Notes Line
+	1860 2870 1860 2665
+Wire Notes Line
+	1860 2885 2035 2885
+Wire Notes Line
+	2035 2885 2035 3030
+Wire Notes Line
+	2035 3030 1860 3030
+Wire Notes Line
+	1860 3030 1860 2885
+Wire Notes Line
+	1860 3410 2015 3410
+Wire Notes Line
+	2015 3410 2015 3205
+Wire Notes Line
+	2015 3205 1860 3205
+Wire Notes Line
+	1860 3205 1860 3410
+Wire Notes Line
+	1860 3190 2035 3190
+Wire Notes Line
+	2035 3190 2035 3045
+Wire Notes Line
+	2035 3045 1860 3045
+Wire Notes Line
+	1860 3045 1860 3190
+Text Notes 1985 2780 2    20   ~ 0
+CAP0A
+Text Notes 1985 2975 2    20   ~ 0
+CAP0B
+Text Notes 1985 3135 2    20   ~ 0
+CAP1A
+Text Notes 1985 3320 2    20   ~ 0
+CAP1B
+Wire Notes Line
+	2155 2665 2310 2665
+Wire Notes Line
+	2310 2665 2310 2870
+Wire Notes Line
+	2310 2870 2155 2870
+Wire Notes Line
+	2155 2870 2155 2665
+Wire Notes Line
+	2155 2885 2330 2885
+Wire Notes Line
+	2330 2885 2330 3030
+Wire Notes Line
+	2330 3030 2155 3030
+Wire Notes Line
+	2155 3030 2155 2885
+Wire Notes Line
+	2155 3410 2310 3410
+Wire Notes Line
+	2310 3410 2310 3205
+Wire Notes Line
+	2310 3205 2155 3205
+Wire Notes Line
+	2155 3205 2155 3410
+Wire Notes Line
+	2155 3190 2330 3190
+Wire Notes Line
+	2330 3190 2330 3045
+Wire Notes Line
+	2330 3045 2155 3045
+Wire Notes Line
+	2155 3045 2155 3190
+Text Notes 2195 2775 0    20   ~ 0
+SCL
+Text Notes 2195 3135 0    20   ~ 0
+SDA
+Wire Notes Line
+	2455 2665 2610 2665
+Wire Notes Line
+	2610 2665 2610 2870
+Wire Notes Line
+	2610 2870 2455 2870
+Wire Notes Line
+	2455 2870 2455 2665
+Wire Notes Line
+	2455 2885 2630 2885
+Wire Notes Line
+	2630 2885 2630 3030
+Wire Notes Line
+	2630 3030 2455 3030
+Wire Notes Line
+	2455 3030 2455 2885
+Wire Notes Line
+	2455 3410 2610 3410
+Wire Notes Line
+	2610 3410 2610 3205
+Wire Notes Line
+	2610 3205 2455 3205
+Wire Notes Line
+	2455 3205 2455 3410
+Wire Notes Line
+	2455 3190 2630 3190
+Wire Notes Line
+	2630 3190 2630 3045
+Wire Notes Line
+	2630 3045 2455 3045
+Wire Notes Line
+	2455 3045 2455 3190
+Text Notes 2505 2775 0    20   ~ 0
+CS
+Text Notes 2505 2970 0    20   ~ 0
+MOSI
+Text Notes 2505 3130 0    20   ~ 0
+CLK
+Text Notes 2505 3315 0    20   ~ 0
+MISO
+Text Notes 2455 2650 0    59   ~ 0
+SPI
+Text Notes 2155 2650 0    59   ~ 0
+I2C
+Text Notes 1860 2650 0    59   ~ 0
+CAP
+Wire Notes Line
+	1775 2665 1840 2665
+Wire Notes Line
+	1840 2665 1840 3410
+Wire Notes Line
+	1840 3410 1775 3410
+Wire Notes Line
+	2370 2665 2435 2665
+Wire Notes Line
+	2435 2665 2435 3410
+Wire Notes Line
+	2435 3410 2370 3410
+Wire Notes Line
+	2070 2665 2135 2665
+Wire Notes Line
+	2135 2665 2135 3410
+Wire Notes Line
+	2135 3410 2070 3410
+NoConn ~ 3935 3300
+NoConn ~ 3935 3400
 $EndSCHEMATC
