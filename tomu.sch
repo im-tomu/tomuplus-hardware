@@ -155,7 +155,7 @@ F 1 "LED" H 860 3410 50  0000 C CNN
 F 2 "LEDs:LED_0402" H 860 3510 50  0001 C CNN
 F 3 "" H 860 3510 50  0000 C CNN
 	1    860  3510
-	0    1    1    0   
+	0    1    -1   0   
 $EndComp
 $Comp
 L LED D2
@@ -248,12 +248,12 @@ CAP1B
 $Comp
 L +3V3 #PWR05
 U 1 1 579B6568
-P 985 3760
-F 0 "#PWR05" H 985 3610 50  0001 C CNN
-F 1 "+3V3" H 985 3900 50  0000 C CNN
-F 2 "" H 985 3760 50  0000 C CNN
-F 3 "" H 985 3760 50  0000 C CNN
-	1    985  3760
+P 1085 3770
+F 0 "#PWR05" H 1085 3620 50  0001 C CNN
+F 1 "+3V3" H 1085 3920 50  0000 C CNN
+F 2 "" H 1085 3770 50  0000 C CNN
+F 3 "" H 1085 3770 50  0000 C CNN
+	1    1085 3770
 	-1   0    0    1   
 $EndComp
 Text Notes 5345 2745 1    60   ~ 0
@@ -366,7 +366,7 @@ Text Label 2925 4675 2    39   ~ 0
 ASPI_SCK
 Text Label 2925 4775 2    39   ~ 0
 ASPI_MOSI
-Text Label 2925 4875 2    39   ~ 0
+Text Label 1010 4840 0    39   ~ 0
 ASPI_MISO
 Wire Wire Line
 	4610 2275 5235 2275
@@ -415,11 +415,6 @@ Connection ~ 5235 2525
 Wire Wire Line
 	5455 2250 5455 3025
 Connection ~ 5455 3025
-Wire Wire Line
-	985  3760 985  3710
-Wire Wire Line
-	860  3710 1085 3710
-Connection ~ 985  3710
 Wire Wire Line
 	1260 3260 1085 3260
 Wire Wire Line
@@ -535,9 +530,7 @@ Wire Wire Line
 	1520 5365 1520 5325
 Connection ~ 1520 5325
 Wire Wire Line
-	2610 4875 2610 5605
-Wire Wire Line
-	2610 4875 2935 4875
+	2850 4875 2935 4875
 Wire Wire Line
 	2530 4775 2530 5040
 Wire Wire Line
@@ -559,11 +552,7 @@ Wire Wire Line
 Wire Wire Line
 	2220 4740 2255 4740
 Wire Wire Line
-	2610 5605 1125 5605
-Wire Wire Line
-	1125 5605 1125 4840
-Wire Wire Line
-	1125 4840 1320 4840
+	1010 4840 1320 4840
 Text Notes 2970 3675 2    20   ~ 0
 SCL
 Text Notes 2970 3775 2    20   ~ 0
@@ -710,6 +699,35 @@ Wire Notes Line
 	2135 2665 2135 3410
 Wire Notes Line
 	2135 3410 2070 3410
-NoConn ~ 3935 3300
 NoConn ~ 3935 3400
+Text Label 3875 3300 2    39   ~ 0
+ASPI_MISO
+Wire Wire Line
+	3935 3300 3875 3300
+$Comp
+L GND #PWR09
+U 1 1 5839545D
+P 2850 4875
+F 0 "#PWR09" H 2850 4625 50  0001 C CNN
+F 1 "GND" H 2850 4725 50  0000 C CNN
+F 2 "" H 2850 4875 50  0000 C CNN
+F 3 "" H 2850 4875 50  0000 C CNN
+	1    2850 4875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1085 3770 1085 3710
+$Comp
+L GND #PWR?
+U 1 1 583958AE
+P 860 3765
+F 0 "#PWR?" H 860 3515 50  0001 C CNN
+F 1 "GND" H 860 3615 50  0000 C CNN
+F 2 "" H 860 3765 50  0000 C CNN
+F 3 "" H 860 3765 50  0000 C CNN
+	1    860  3765
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	860  3765 860  3710
 $EndSCHEMATC
