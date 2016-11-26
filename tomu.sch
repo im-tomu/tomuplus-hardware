@@ -155,7 +155,7 @@ F 1 "LED" H 860 3410 50  0000 C CNN
 F 2 "LEDs:LED_0402" H 860 3510 50  0001 C CNN
 F 3 "" H 860 3510 50  0000 C CNN
 	1    860  3510
-	0    1    -1   0   
+	0    1    1    0   
 $EndComp
 $Comp
 L LED D2
@@ -248,12 +248,12 @@ CAP1B
 $Comp
 L +3V3 #PWR05
 U 1 1 579B6568
-P 1085 3770
-F 0 "#PWR05" H 1085 3620 50  0001 C CNN
-F 1 "+3V3" H 1085 3920 50  0000 C CNN
-F 2 "" H 1085 3770 50  0000 C CNN
-F 3 "" H 1085 3770 50  0000 C CNN
-	1    1085 3770
+P 985 3760
+F 0 "#PWR05" H 985 3610 50  0001 C CNN
+F 1 "+3V3" H 985 3900 50  0000 C CNN
+F 2 "" H 985 3760 50  0000 C CNN
+F 3 "" H 985 3760 50  0000 C CNN
+	1    985  3760
 	-1   0    0    1   
 $EndComp
 Text Notes 5345 2745 1    60   ~ 0
@@ -347,7 +347,7 @@ U 1 1 583917F0
 P 1520 5040
 F 0 "U2" H 1570 4940 60  0000 C CNN
 F 1 "ateccXXXa" H 1770 5440 60  0000 C CNN
-F 2 "" H 1520 5040 60  0001 C CNN
+F 2 "Housings_DFN_QFN:DFN-8-1EP_3x2mm_Pitch0.5mm" H 1520 5040 60  0001 C CNN
 F 3 "" H 1520 5040 60  0001 C CNN
 	1    1520 5040
 	1    0    0    -1  
@@ -361,13 +361,59 @@ MOSI
 Text Notes 2935 4475 2    20   ~ 0
 MISO
 Text Label 2925 4575 2    39   ~ 0
-ASPI_CS
+ASPI_CS1
 Text Label 2925 4675 2    39   ~ 0
 ASPI_SCK
 Text Label 2925 4775 2    39   ~ 0
 ASPI_MOSI
 Text Label 1010 4840 0    39   ~ 0
 ASPI_MISO
+Text Notes 2970 3675 2    20   ~ 0
+SCL
+Text Notes 2970 3775 2    20   ~ 0
+SDA
+Text Notes 2510 3775 0    20   ~ 0
+SCK
+Text Notes 1985 2780 2    20   ~ 0
+CAP0A
+Text Notes 1985 2975 2    20   ~ 0
+CAP0B
+Text Notes 1985 3135 2    20   ~ 0
+CAP1A
+Text Notes 1985 3320 2    20   ~ 0
+CAP1B
+Text Notes 2195 2775 0    20   ~ 0
+SCL
+Text Notes 2195 3135 0    20   ~ 0
+SDA
+Text Notes 2505 2775 0    20   ~ 0
+CS
+Text Notes 2505 2970 0    20   ~ 0
+MOSI
+Text Notes 2505 3130 0    20   ~ 0
+CLK
+Text Notes 2505 3315 0    20   ~ 0
+MISO
+Text Notes 2455 2650 0    59   ~ 0
+SPI
+Text Notes 2155 2650 0    59   ~ 0
+I2C
+Text Notes 1860 2650 0    59   ~ 0
+CAP
+NoConn ~ 3935 3400
+Text Label 3875 3300 2    39   ~ 0
+ASPI_MISO
+$Comp
+L GND #PWR09
+U 1 1 5839545D
+P 2850 4875
+F 0 "#PWR09" H 2850 4625 50  0001 C CNN
+F 1 "GND" H 2850 4725 50  0000 C CNN
+F 2 "" H 2850 4875 50  0000 C CNN
+F 3 "" H 2850 4875 50  0000 C CNN
+	1    2850 4875
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	4610 2275 5235 2275
 Wire Wire Line
@@ -544,21 +590,13 @@ Wire Wire Line
 Wire Wire Line
 	2530 5040 2220 5040
 Wire Wire Line
-	1280 4575 2935 4575
+	1165 4575 2935 4575
 Wire Wire Line
-	1280 4575 1280 4740
-Wire Wire Line
-	1280 4740 1320 4740
+	865  4740 1320 4740
 Wire Wire Line
 	2220 4740 2255 4740
 Wire Wire Line
 	1010 4840 1320 4840
-Text Notes 2970 3675 2    20   ~ 0
-SCL
-Text Notes 2970 3775 2    20   ~ 0
-SDA
-Text Notes 2510 3775 0    20   ~ 0
-SCK
 Wire Notes Line
 	1860 2665 2015 2665
 Wire Notes Line
@@ -591,14 +629,6 @@ Wire Notes Line
 	2035 3045 1860 3045
 Wire Notes Line
 	1860 3045 1860 3190
-Text Notes 1985 2780 2    20   ~ 0
-CAP0A
-Text Notes 1985 2975 2    20   ~ 0
-CAP0B
-Text Notes 1985 3135 2    20   ~ 0
-CAP1A
-Text Notes 1985 3320 2    20   ~ 0
-CAP1B
 Wire Notes Line
 	2155 2665 2310 2665
 Wire Notes Line
@@ -631,10 +661,6 @@ Wire Notes Line
 	2330 3045 2155 3045
 Wire Notes Line
 	2155 3045 2155 3190
-Text Notes 2195 2775 0    20   ~ 0
-SCL
-Text Notes 2195 3135 0    20   ~ 0
-SDA
 Wire Notes Line
 	2455 2665 2610 2665
 Wire Notes Line
@@ -667,20 +693,6 @@ Wire Notes Line
 	2630 3045 2455 3045
 Wire Notes Line
 	2455 3045 2455 3190
-Text Notes 2505 2775 0    20   ~ 0
-CS
-Text Notes 2505 2970 0    20   ~ 0
-MOSI
-Text Notes 2505 3130 0    20   ~ 0
-CLK
-Text Notes 2505 3315 0    20   ~ 0
-MISO
-Text Notes 2455 2650 0    59   ~ 0
-SPI
-Text Notes 2155 2650 0    59   ~ 0
-I2C
-Text Notes 1860 2650 0    59   ~ 0
-CAP
 Wire Notes Line
 	1775 2665 1840 2665
 Wire Notes Line
@@ -699,35 +711,28 @@ Wire Notes Line
 	2135 2665 2135 3410
 Wire Notes Line
 	2135 3410 2070 3410
-NoConn ~ 3935 3400
-Text Label 3875 3300 2    39   ~ 0
-ASPI_MISO
 Wire Wire Line
 	3935 3300 3875 3300
+Wire Wire Line
+	985  3760 985  3710
+Wire Wire Line
+	860  3710 1085 3710
+Connection ~ 985  3710
+Text Label 1165 4740 2    39   ~ 0
+ASPI_CS2
 $Comp
-L GND #PWR09
-U 1 1 5839545D
-P 2850 4875
-F 0 "#PWR09" H 2850 4625 50  0001 C CNN
-F 1 "GND" H 2850 4725 50  0000 C CNN
-F 2 "" H 2850 4875 50  0000 C CNN
-F 3 "" H 2850 4875 50  0000 C CNN
-	1    2850 4875
+L Jumper_NO_Small JP1
+U 1 1 58396FFD
+P 1065 4575
+F 0 "JP1" H 1065 4655 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 1075 4515 50  0001 C CNN
+F 2 "Resistors_SMD:R_0402" H 1065 4575 50  0001 C CNN
+F 3 "" H 1065 4575 50  0000 C CNN
+	1    1065 4575
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1085 3770 1085 3710
-$Comp
-L GND #PWR?
-U 1 1 583958AE
-P 860 3765
-F 0 "#PWR?" H 860 3515 50  0001 C CNN
-F 1 "GND" H 860 3615 50  0000 C CNN
-F 2 "" H 860 3765 50  0000 C CNN
-F 3 "" H 860 3765 50  0000 C CNN
-	1    860  3765
-	1    0    0    -1  
-$EndComp
+	865  4740 865  4575
 Wire Wire Line
-	860  3765 860  3710
+	865  4575 965  4575
 $EndSCHEMATC
