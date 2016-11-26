@@ -44,12 +44,12 @@ popt.SetScale(1)                #do not change it
 popt.SetMirror(False)
 popt.SetUseGerberAttributes(False)
 popt.SetUseGerberProtelExtensions(True)
-popt.SetExcludeEdgeLayer(False);
+popt.SetExcludeEdgeLayer(False)
 popt.SetScale(1)
 popt.SetUseAuxOrigin(True)
 
 # This by gerbers only (also the name is truly horrid!)
-popt.SetSubtractMaskFromSilk(False)
+popt.SetSubtractMaskFromSilk(True)
 
 # Once the defaults are set it become pretty easy...
 # I have a Turing-complete programming language here: I'll use it...
