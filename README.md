@@ -1,3 +1,48 @@
+# THIS PROJECT HAS BEEN ABANDONED!
+
+The Tomu+ has been abandoned and is not under development.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+----
 
 # [Tomu+, I'm](tomu.im)
 
